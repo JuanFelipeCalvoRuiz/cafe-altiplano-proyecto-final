@@ -1,0 +1,126 @@
+/* ==========================================================
+   tipografia.css · Familias, jerarquía y texto
+   Unidades 05 (tipografía) y 06 (rem y ch)
+   Todos los tamaños de letra están en rem.
+   ========================================================== */
+
+/* 1. FAMILIAS, cada una con alternativas */
+:root {
+  --fuente-titulos: "Iowan Old Style", "Palatino Linotype", Palatino,
+    "Book Antiqua", Georgia, serif;
+  --fuente-texto: "Segoe UI", system-ui, -apple-system, "Helvetica Neue",
+    Arial, sans-serif;
+}
+
+body {
+  font-family: var(--fuente-texto);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* 2. JERARQUÍA DE TÍTULOS (móvil primero; los saltos están en layout.css) */
+:is(h1, h2, h3) {
+  margin: 0 0 0.75rem;
+  font-family: var(--fuente-titulos);
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.25rem;
+}
+
+h2 {
+  font-size: 1.625rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+/* 3. TEXTO CORRIDO: ancho de lectura de unos 65 caracteres */
+p {
+  max-width: 65ch;
+  margin: 0 0 1rem;
+}
+
+strong,
+dt {
+  font-weight: 700;
+}
+
+.texto-suave {
+  color: var(--color-suave);
+  font-size: 0.875rem;
+}
+
+/* 4. MARCA Y PORTADA */
+.marca__nombre {
+  font-family: var(--fuente-titulos);
+  font-size: 1.375rem;
+  font-weight: 700;
+}
+
+.portada__lead {
+  max-width: 55ch;
+  font-size: 1.25rem;
+}
+
+.pie__nota {
+  font-size: 0.875rem;
+}
+
+/* 5. DATOS: listas de definición, tablas y precios */
+dd + dt {
+  margin-top: 0.75rem;
+}
+
+.tabla caption {
+  color: var(--color-suave);
+  font-size: 0.875rem;
+}
+
+.tabla th {
+  font-weight: 700;
+}
+
+.tabla__precio,
+.producto__precio {
+  font-variant-numeric: tabular-nums;
+}
+
+.producto__precio {
+  font-weight: 700;
+}
+
+/* 6. CITAS */
+.cita__texto {
+  font-family: var(--fuente-titulos);
+  font-size: 1.25rem;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.cita__autor {
+  color: var(--color-suave);
+  font-size: 0.9375rem;
+}
+
+cite {
+  font-style: normal;
+}
+
+/* 7. FORMULARIO */
+.grupo__leyenda {
+  font-family: var(--fuente-titulos);
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.campo__etiqueta {
+  font-weight: 600;
+}
+
+.enlace-sede__ciudad {
+  color: var(--color-suave);
+  font-size: 0.875rem;
+}

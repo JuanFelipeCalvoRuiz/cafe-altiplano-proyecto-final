@@ -1,0 +1,73 @@
+/* ==========================================================
+   base.css · Paleta, reinicio, fondo y enlaces
+   Unidades 03 (variables, fondo) y 05 (box-sizing, página centrada)
+   ========================================================== */
+
+/* 1. PALETA
+   Único lugar del sitio donde aparecen colores. El resto de las
+   hojas solo usa estas variables. */
+:root {
+  /* Canales RGB: permiten transparencia sobre la misma paleta */
+  --rgb-pizarra: 28 43 51;
+  --rgb-papel: 255 255 255;
+
+  --color-pizarra: rgb(var(--rgb-pizarra));   /* texto y fondos oscuros */
+  --color-papel: rgb(var(--rgb-papel));       /* tarjetas y texto sobre oscuro */
+  --color-laguna: #2e5b68;                    /* azul verdoso de la cabecera */
+  --color-niebla: #eef3f3;                    /* fondo de la página */
+  --color-cereza: #b02a3f;                    /* acento: botones y enlaces */
+  --color-cereza-oscuro: #861d2f;             /* acento al pasar el cursor */
+  --color-paja: #e3b660;                      /* detalle cálido y foco sobre oscuro */
+  --color-borde: #b9cacd;                     /* líneas finas */
+  --color-suave: #4a5a61;                     /* texto secundario */
+  --color-fila: #e6eff1;                      /* filas alternas y fondos suaves */
+  --color-foco: #0f4c9c;                      /* anillo de foco sobre claro */
+  --color-nada: transparent;                  /* sin color */
+
+  /* 2. ESPACIOS Y ESQUINAS (siempre en rem) */
+  --espacio-1: 0.5rem;
+  --espacio-2: 1rem;
+  --espacio-3: 1.5rem;
+  --espacio-4: 2.5rem;
+  --radio: 0.75rem;
+  --radio-chico: 0.5rem;
+}
+
+/* 3. REINICIO */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+/* El color de letra se declara aquí y se hereda en el resto */
+body {
+  margin: 0;
+  background-color: var(--color-niebla);
+  background-image: url("../imagenes/fondo-altiplano.svg");
+  color: var(--color-pizarra);
+  overflow-wrap: break-word;
+}
+
+/* Imágenes flexibles */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+figure,
+blockquote,
+dd {
+  margin: 0;
+}
+
+/* 4. ENLACES */
+a {
+  color: var(--color-cereza);
+  text-underline-offset: 0.2em;
+}

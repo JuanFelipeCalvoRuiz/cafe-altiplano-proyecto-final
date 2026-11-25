@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Reserva una mesa en Café Altiplano: elige sede, fecha, hora y número de personas.">
+  <title>Reservas · Café Altiplano</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/tipografia.css">
+  <link rel="stylesheet" href="css/cajas.css">
+  <link rel="stylesheet" href="css/componentes.css">
+  <link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+  <a class="salto" href="#contenido">Saltar al contenido</a>
+
+  <div class="pagina">
+
+    <!-- ===== CABECERA Y MENÚ ===== -->
+    <header class="cabecera">
+      <a class="marca" href="index.html">
+        <img class="marca__logo" src="imagenes/logo.svg" alt="" width="96" height="96">
+        <span class="marca__nombre">Café Altiplano</span>
+      </a>
+      <nav class="menu" aria-label="Principal">
+        <ul class="menu__lista">
+          <li><a class="menu__enlace" href="index.html">Inicio</a></li>
+          <li><a class="menu__enlace" href="carta.html">Carta</a></li>
+          <li><a class="menu__enlace" href="sedes.html">Sedes</a></li>
+          <li><a class="menu__enlace menu__enlace--actual" href="reservas.html" aria-current="page">Reservas</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ===== PORTADA ===== -->
+    <section class="portada portada--interior">
+      <h1>Reservas</h1>
+      <p class="portada__lead">Cuéntanos cuándo vienes y te guardamos la mesa.</p>
+    </section>
+
+    <!-- ===== CONTENIDO PRINCIPAL ===== -->
+    <main class="contenido" id="contenido">
+      <!-- ===== FORMULARIO DE RESERVA ===== -->
+      <section class="tarjeta tarjeta--ancha">
+        <h2>Reserva tu mesa</h2>
+        <form class="formulario" action="#" method="get">
+
+          <fieldset class="grupo">
+            <legend class="grupo__leyenda">Tus datos</legend>
+            <div class="grupo__campos">
+              <div class="campo campo--ancho">
+                <label class="campo__etiqueta" for="nombre">Nombre completo</label>
+                <input class="campo__control" type="text" id="nombre" name="nombre" placeholder="Ej.: Camila Rojas" autocomplete="name" required>
+              </div>
+              <div class="campo">
+                <label class="campo__etiqueta" for="correo">Correo electrónico</label>
+                <input class="campo__control" type="email" id="correo" name="correo" placeholder="nombre@correo.com" autocomplete="email" required>
+              </div>
+              <div class="campo">
+                <label class="campo__etiqueta" for="telefono">Teléfono (opcional)</label>
+                <input class="campo__control" type="tel" id="telefono" name="telefono" placeholder="300 000 0000" autocomplete="tel">
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="grupo">
+            <legend class="grupo__leyenda">Tu visita</legend>
+            <div class="grupo__campos">
+              <div class="campo campo--ancho">
+                <label class="campo__etiqueta" for="sede">Sede</label>
+                <select class="campo__control" id="sede" name="sede" required>
+                  <option value="">Elige una sede</option>
+                  <option value="chapinero">Chapinero, Bogotá</option>
+                  <option value="tunja">Tunja Centro</option>
+                  <option value="zipaquira">La Tostadora, Zipaquirá</option>
+                </select>
+              </div>
+              <div class="campo">
+                <label class="campo__etiqueta" for="fecha">Fecha</label>
+                <input class="campo__control" type="date" id="fecha" name="fecha" required>
+              </div>
+              <div class="campo">
+                <label class="campo__etiqueta" for="hora">Hora</label>
+                <input class="campo__control" type="time" id="hora" name="hora" min="07:00" max="19:30" step="1800" required>
+              </div>
+              <div class="campo">
+                <label class="campo__etiqueta" for="personas">Número de personas</label>
+                <input class="campo__control" type="number" id="personas" name="personas" min="1" max="10" value="2" required>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="grupo">
+            <legend class="grupo__leyenda">Preferencias</legend>
+            <div class="grupo__campos">
+              <fieldset class="grupo grupo--anidado campo--ancho">
+                <legend class="campo__etiqueta">Zona de la mesa</legend>
+                <div class="opciones">
+                  <div class="opcion">
+                    <input type="radio" id="zona-interior" name="zona" value="interior">
+                    <label for="zona-interior">Salón interior</label>
+                  </div>
+                  <div class="opcion">
+                    <input type="radio" id="zona-terraza" name="zona" value="terraza">
+                    <label for="zona-terraza">Terraza</label>
+                  </div>
+                  <div class="opcion">
+                    <input type="radio" id="zona-cualquiera" name="zona" value="cualquiera" checked>
+                    <label for="zona-cualquiera">Sin preferencia</label>
+                  </div>
+                </div>
+              </fieldset>
+              <div class="opcion campo--ancho">
+                <input type="checkbox" id="celebracion" name="celebracion" value="si">
+                <label for="celebracion">Es una celebración (cumpleaños, aniversario)</label>
+              </div>
+              <div class="campo campo--ancho">
+                <label class="campo__etiqueta" for="comentarios">Comentarios</label>
+                <textarea class="campo__control" id="comentarios" name="comentarios" rows="4" placeholder="Alergias, silla para bebé, mesa tranquila…"></textarea>
+              </div>
+              <div class="opcion campo--ancho">
+                <input type="checkbox" id="datos" name="datos" value="si" required>
+                <label for="datos">Acepto que Café Altiplano use estos datos solo para confirmar mi reserva.</label>
+              </div>
+            </div>
+          </fieldset>
+
+          <div>
+            <button class="boton" type="submit">Enviar reserva</button>
+          </div>
+          <p class="texto-suave">Este formulario es una maqueta del proyecto: no envía datos.</p>
+        </form>
+      </section>
+
+      <!-- ===== CÓMO FUNCIONA ===== -->
+      <aside class="tarjeta">
+        <h2>Cómo funciona</h2>
+        <ol class="lista">
+          <li>Llena el formulario con la sede, la fecha y la hora.</li>
+          <li>Te escribimos para confirmar tu mesa.</li>
+          <li>Llega con calma: te esperamos 15 minutos.</li>
+        </ol>
+      </aside>
+
+      <!-- ===== ANTES DE RESERVAR ===== -->
+      <aside class="tarjeta">
+        <h2>Antes de reservar</h2>
+        <ul class="lista">
+          <li>Reservamos mesas para entre 1 y 10 personas.</li>
+          <li>Para grupos más grandes, llámanos a la sede.</li>
+          <li>Puedes cancelar respondiendo el correo de confirmación.</li>
+        </ul>
+      </aside>
+    </main>
+
+    <!-- ===== PIE DE PÁGINA ===== -->
+    <footer class="pie">
+      <address>
+        Escríbenos a <a href="mailto:hola@cafealtiplano.example">hola@cafealtiplano.example</a><br>
+        o llámanos al +57 601 555 0142.
+      </address>
+      <p class="pie__nota">© 2026 Café Altiplano. Sitio de práctica: todos los datos son inventados.</p>
+    </footer>
+
+  </div>
+</body>
+</html>

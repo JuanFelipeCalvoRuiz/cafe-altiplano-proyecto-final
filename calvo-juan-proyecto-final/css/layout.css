@@ -1,0 +1,187 @@
+/* ==========================================================
+   layout.css · Disposición con Grid y diseño adaptable
+   Unidades 06 (rem, %, vh) y 07 (Grid, móvil primero)
+
+   Enfoque móvil primero: la base es el teléfono (una columna).
+   Puntos de ruptura: 600 px (dos columnas) y 900 px (tres columnas),
+   escritos de menor a mayor.
+   ========================================================== */
+
+/* ----------------------------------------------------------
+   1. BASE (teléfono): una columna
+   ---------------------------------------------------------- */
+
+/* Página centrada, con ancho máximo. Es el contenedor principal. */
+.pagina {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--espacio-3);
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: var(--espacio-2);
+}
+
+/* Cabecera, portada, contenido y pie ocupan todo el ancho */
+.cabecera,
+.portada,
+.contenido,
+.pie {
+  grid-column: 1 / -1;
+}
+
+/* El contenido hereda las columnas de la página con subgrid */
+.contenido {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-auto-flow: dense;
+  gap: var(--espacio-3);
+}
+
+/* Evita que una tabla ancha estire la columna */
+.contenido > * {
+  min-width: 0;
+}
+
+/* Bloques que ocupan todo el ancho */
+.tarjeta--completa,
+.galeria {
+  grid-column: 1 / -1;
+}
+
+/* Cabecera y menú */
+.cabecera {
+  display: grid;
+  align-items: center;
+  gap: var(--espacio-2);
+}
+
+.marca {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: var(--espacio-1);
+}
+
+.menu__lista {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--espacio-1);
+}
+
+/* Portada */
+.portada {
+  display: grid;
+  align-content: end;
+}
+
+.portada__acciones {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 12rem));
+  justify-content: start;
+  gap: var(--espacio-2);
+}
+
+/* Galería: se acomoda sola, sin consultas de medios */
+.galeria__lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+  gap: var(--espacio-2);
+}
+
+/* Lista de sedes en el inicio */
+.sedes-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
+  gap: var(--espacio-2);
+}
+
+/* Formulario */
+.formulario {
+  display: grid;
+  gap: var(--espacio-3);
+}
+
+.grupo__campos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+  gap: var(--espacio-2);
+}
+
+.grupo__campos > .campo--ancho {
+  grid-column: 1 / -1;
+}
+
+.opciones {
+  display: grid;
+  gap: var(--espacio-1);
+}
+
+.opcion {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: var(--espacio-1);
+}
+
+/* Pie */
+.pie {
+  display: grid;
+  gap: var(--espacio-1) var(--espacio-3);
+}
+
+/* ----------------------------------------------------------
+   2. DESDE 600 px: dos columnas
+   ---------------------------------------------------------- */
+@media (min-width: 600px) {
+  .pagina {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: var(--espacio-3);
+  }
+
+  /* Un bloque que ocupa dos columnas */
+  .tarjeta--ancha {
+    grid-column: span 2;
+  }
+
+  .tarjeta {
+    padding: var(--espacio-3);
+  }
+
+  .menu__lista {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .pie {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  h1 {
+    font-size: 2.75rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+}
+
+/* ----------------------------------------------------------
+   3. DESDE 900 px: tres columnas
+   ---------------------------------------------------------- */
+@media (min-width: 900px) {
+  .pagina {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    padding: var(--espacio-4);
+  }
+
+  .cabecera {
+    grid-template-columns: 1fr minmax(0, 30rem);
+  }
+
+  h1 {
+    font-size: 3.25rem;
+  }
+
+  .portada {
+    padding: var(--espacio-4);
+  }
+}

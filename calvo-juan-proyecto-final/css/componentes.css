@@ -1,0 +1,220 @@
+/* ==========================================================
+   componentes.css · Piezas reutilizables y sus estados
+   Unidades 03 (gradiente, fondo, transparencia) y 04 (selectores)
+   Nombres de clase con BEM: bloque__elemento--modificador
+   ========================================================== */
+
+/* 1. SALTAR AL CONTENIDO (aparece al enfocarlo con el teclado) */
+.salto {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  padding: 0.75rem 1rem;
+  background-color: var(--color-papel);
+  color: var(--color-pizarra);
+  transform: translateY(-120%);
+}
+
+.salto:focus {
+  transform: none;
+}
+
+/* 2. CABECERA Y MARCA: gradiente de la paleta */
+.cabecera {
+  background-image: linear-gradient(135deg, var(--color-pizarra), var(--color-laguna));
+  color: var(--color-papel);
+}
+
+.marca {
+  color: inherit;
+  text-decoration: none;
+}
+
+.marca__logo {
+  width: 3rem;
+  height: 3rem;
+}
+
+/* 3. MENÚ */
+.menu__lista {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu__enlace {
+  display: block;
+  padding: 0.625rem 0.75rem;
+  border: 1px solid rgb(var(--rgb-papel) / 0.35);
+  border-radius: var(--radio-chico);
+  color: var(--color-papel);
+  text-align: center;
+  text-decoration: none;
+}
+
+.menu__enlace:not(.menu__enlace--actual):is(:hover, :focus) {
+  border-color: var(--color-paja);
+  background-color: rgb(var(--rgb-papel) / 0.18);
+}
+
+/* Página actual */
+.menu__enlace--actual {
+  border-color: var(--color-papel);
+  background-color: var(--color-papel);
+  color: var(--color-pizarra);
+  font-weight: 700;
+}
+
+/* 4. PORTADA: imagen de fondo con velo semitransparente */
+.portada {
+  background-color: var(--color-pizarra);
+  background-image:
+    linear-gradient(rgb(var(--rgb-pizarra) / 0.05), rgb(var(--rgb-pizarra) / 0.8)),
+    url("../imagenes/portada.svg");
+  background-position: center;
+  background-size: cover;
+  color: var(--color-papel);
+}
+
+/* 5. BOTONES */
+.boton {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--color-cereza);
+  border-radius: var(--radio-chico);
+  background-color: var(--color-cereza);
+  color: var(--color-papel);
+  font: inherit;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.boton:is(:hover, :focus) {
+  border-color: var(--color-cereza-oscuro);
+  background-color: var(--color-cereza-oscuro);
+  color: var(--color-papel);
+}
+
+.boton--secundario {
+  border-color: var(--color-papel);
+  background-color: var(--color-nada);
+}
+
+.boton--secundario:is(:hover, :focus) {
+  border-color: var(--color-papel);
+  background-color: rgb(var(--rgb-papel) / 0.2);
+}
+
+/* 6. ÍNDICE DE LA CARTA Y ENLACES A SEDES */
+.indice__lista a {
+  color: var(--color-pizarra);
+  text-decoration: none;
+}
+
+.enlace-sede {
+  color: inherit;
+  text-decoration: none;
+}
+
+.enlace-sede:is(:hover, :focus) {
+  border-color: var(--color-cereza);
+  background-color: var(--color-fila);
+}
+
+/* 7. FORMULARIO */
+.campo__control {
+  color: inherit;
+  font: inherit;
+}
+
+.campo__control::placeholder {
+  color: var(--color-suave);
+  opacity: 1;
+}
+
+.campo__control:hover {
+  border-color: var(--color-laguna);
+}
+
+.campo__control:focus {
+  border-color: var(--color-foco);
+  background-color: var(--color-fila);
+}
+
+/* Campos obligatorios: marca lateral (selector de atributo) */
+.campo__control[required] {
+  border-left: 0.25rem solid var(--color-cereza);
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: 1.25rem;
+  height: 1.25rem;
+  accent-color: var(--color-cereza);
+}
+
+/* 8. PIE */
+.pie {
+  background-color: var(--color-pizarra);
+  color: var(--color-papel);
+}
+
+.pie a {
+  color: var(--color-paja);
+}
+
+.pie address {
+  font-style: normal;
+}
+
+/* 9. TEXTO SOLO PARA LECTORES DE PANTALLA */
+.solo-lectores {
+  position: absolute;
+  width: 0.0625rem;
+  height: 0.0625rem;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* ==========================================================
+   ESTADOS Y SELECTORES AVANZADOS
+   ========================================================== */
+
+/* Foco siempre visible: azul sobre claro, ámbar sobre oscuro */
+:focus {
+  outline: 0.1875rem solid var(--color-foco);
+  outline-offset: 0.1875rem;
+}
+
+:is(.cabecera, .portada, .pie) :focus {
+  outline-color: var(--color-paja);
+}
+
+/* Enlaces simples (sin clase) */
+a:not([class]):is(:hover, :focus) {
+  color: var(--color-cereza-oscuro);
+  text-decoration-thickness: 0.125rem;
+}
+
+.pie a:is(:hover, :focus) {
+  color: var(--color-papel);
+}
+
+.indice__lista a:is(:hover, :focus) {
+  background-color: var(--color-fila);
+}
+
+/* Filas alternas de las tablas */
+.tabla tbody tr:nth-child(even) {
+  background-color: var(--color-fila);
+}
+
+/* Enlaces externos: marca visual (selector de atributo) */
+a[target="_blank"]::after {
+  content: " \2197";
+  content: " \2197" / "";
+}

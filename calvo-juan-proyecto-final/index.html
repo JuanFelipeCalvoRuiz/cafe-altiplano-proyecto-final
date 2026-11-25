@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Café Altiplano: cafetería de especialidad con tres sedes en el altiplano. Carta, sedes y reservas.">
+  <title>Café Altiplano · Café de especialidad</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/tipografia.css">
+  <link rel="stylesheet" href="css/cajas.css">
+  <link rel="stylesheet" href="css/componentes.css">
+  <link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+  <a class="salto" href="#contenido">Saltar al contenido</a>
+
+  <div class="pagina">
+
+    <!-- ===== CABECERA Y MENÚ ===== -->
+    <header class="cabecera">
+      <a class="marca" href="index.html">
+        <img class="marca__logo" src="imagenes/logo.svg" alt="" width="96" height="96">
+        <span class="marca__nombre">Café Altiplano</span>
+      </a>
+      <nav class="menu" aria-label="Principal">
+        <ul class="menu__lista">
+          <li><a class="menu__enlace menu__enlace--actual" href="index.html" aria-current="page">Inicio</a></li>
+          <li><a class="menu__enlace" href="carta.html">Carta</a></li>
+          <li><a class="menu__enlace" href="sedes.html">Sedes</a></li>
+          <li><a class="menu__enlace" href="reservas.html">Reservas</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ===== PORTADA ===== -->
+    <section class="portada portada--inicio">
+      <h1>Café Altiplano</h1>
+      <p class="portada__lead">Café de especialidad tostado cada semana, servido a más de dos mil metros. Ven por un tinto de altura o reserva tu mesa.</p>
+      <div class="portada__acciones">
+        <a class="boton" href="carta.html">Ver la carta</a>
+        <a class="boton boton--secundario" href="reservas.html">Reservar mesa</a>
+      </div>
+    </section>
+
+    <!-- ===== CONTENIDO PRINCIPAL ===== -->
+    <main class="contenido" id="contenido">
+      <!-- ===== HISTORIA ===== -->
+      <section class="tarjeta tarjeta--ancha tarjeta--destacada">
+        <h2>Del cerro a tu taza</h2>
+        <p>Compramos café de fincas familiares que cultivan por encima de los 1.800 metros. Lo tostamos cada lunes en Zipaquirá, en lotes pequeños, y lo servimos esa misma semana en nuestras tres sedes.</p>
+        <p>Aquí el café se toma despacio: con una almojábana tibia, una conversación o un libro abierto.</p>
+        <ul class="lista">
+          <li>Compra directa a doce fincas familiares.</li>
+          <li>Tostión semanal, sin inventarios largos.</li>
+          <li>Vasos, tapas y bolsas compostables.</li>
+        </ul>
+      </section>
+
+      <!-- ===== HORARIO ===== -->
+      <aside class="tarjeta">
+        <h2>Horario general</h2>
+        <dl>
+          <dt>Lunes a viernes</dt>
+          <dd>7:00 a. m. a 8:00 p. m.</dd>
+          <dt>Sábados y domingos</dt>
+          <dd>8:00 a. m. a 9:00 p. m.</dd>
+        </dl>
+        <p class="texto-suave">Cada sede puede variar. Consulta el horario exacto en <a href="sedes.html">Sedes</a>.</p>
+      </aside>
+
+      <!-- ===== GALERÍA DE FAVORITOS ===== -->
+      <section class="galeria">
+        <h2>Favoritos de la casa</h2>
+        <ul class="galeria__lista lista--limpia">
+        <li class="producto">
+          <img class="producto__imagen" src="imagenes/producto-tinto.svg" alt="Taza blanca de tinto humeante sobre un platillo" width="800" height="600">
+          <div class="producto__cuerpo">
+            <h3>Tinto de altura</h3>
+            <p>Filtrado, con notas de panela y cacao.</p>
+            <p class="producto__precio">$5.500</p>
+          </div>
+        </li>
+        <li class="producto">
+          <img class="producto__imagen" src="imagenes/producto-capuchino.svg" alt="Capuchino visto desde arriba, con un corazón en la espuma" width="800" height="600">
+          <div class="producto__cuerpo">
+            <h3>Capuchino</h3>
+            <p>Espresso con leche vaporizada y espuma densa.</p>
+            <p class="producto__precio">$9.800</p>
+          </div>
+        </li>
+        <li class="producto">
+          <img class="producto__imagen" src="imagenes/producto-coldbrew.svg" alt="Vaso alto de café frío con hielo y pitillo rojo" width="800" height="600">
+          <div class="producto__cuerpo">
+            <h3>Cold brew</h3>
+            <p>Extraído en frío durante dieciocho horas.</p>
+            <p class="producto__precio">$10.800</p>
+          </div>
+        </li>
+        <li class="producto">
+          <img class="producto__imagen" src="imagenes/producto-almojabana.svg" alt="Tres almojábanas doradas recién horneadas" width="800" height="600">
+          <div class="producto__cuerpo">
+            <h3>Almojábana tibia</h3>
+            <p>Queso campesino y cuajada, horneada cada mañana.</p>
+            <p class="producto__precio">$4.200</p>
+          </div>
+        </li>
+        <li class="producto">
+          <img class="producto__imagen" src="imagenes/producto-chocolate.svg" alt="Taza de chocolate caliente con cubos de queso al frente" width="800" height="600">
+          <div class="producto__cuerpo">
+            <h3>Chocolate santafereño</h3>
+            <p>Espeso, con queso campesino para sumergir.</p>
+            <p class="producto__precio">$11.500</p>
+          </div>
+        </li>
+        <li class="producto">
+          <img class="producto__imagen" src="imagenes/producto-grano.svg" alt="Bolsa azul de café en grano con granos regados al frente" width="800" height="600">
+          <div class="producto__cuerpo">
+            <h3>Café en grano</h3>
+            <p>Bolsa de 250 g, molido a tu gusto.</p>
+            <p class="producto__precio">$32.000</p>
+          </div>
+        </li>
+        </ul>
+      </section>
+
+      <!-- ===== PROCESO ===== -->
+      <section class="tarjeta">
+        <h2>Así preparamos tu café</h2>
+        <ol class="lista">
+          <li>Molemos el grano justo antes de preparar tu taza.</li>
+          <li>Medimos el agua a 93 °C y cronometramos la extracción.</li>
+          <li>Probamos cada lote antes de servirlo.</li>
+          <li>Te lo entregamos en taza de cerámica, si te quedas.</li>
+        </ol>
+      </section>
+
+      <!-- ===== OPINIÓN DE UN CLIENTE ===== -->
+      <section class="tarjeta tarjeta--ancha">
+        <h2>Lo que dicen de nosotros</h2>
+        <figure class="cita">
+          <blockquote class="cita__texto" cite="https://cafealtiplano.example/opiniones/laura">
+            <p>“El tinto de altura sabe a panela y a cacao, y la almojábana llega siempre tibia. Es mi parada de los domingos.”</p>
+          </blockquote>
+          <figcaption class="cita__autor">Laura M., de la sede Chapinero, en <cite>Opiniones de clientes</cite></figcaption>
+        </figure>
+      </section>
+
+      <!-- ===== SEDES ===== -->
+      <section class="tarjeta tarjeta--completa">
+        <h2>Visítanos</h2>
+        <ul class="sedes-lista lista--limpia">
+          <li><a class="enlace-sede" href="sedes.html#sede-chapinero"><strong>Chapinero</strong><span class="enlace-sede__ciudad">Bogotá</span></a></li>
+          <li><a class="enlace-sede" href="sedes.html#sede-tunja"><strong>Tunja Centro</strong><span class="enlace-sede__ciudad">Tunja</span></a></li>
+          <li><a class="enlace-sede" href="sedes.html#sede-zipaquira"><strong>La Tostadora</strong><span class="enlace-sede__ciudad">Zipaquirá</span></a></li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- ===== PIE DE PÁGINA ===== -->
+    <footer class="pie">
+      <address>
+        Escríbenos a <a href="mailto:hola@cafealtiplano.example">hola@cafealtiplano.example</a><br>
+        o llámanos al +57 601 555 0142.
+      </address>
+      <p class="pie__nota">© 2026 Café Altiplano. Sitio de práctica: todos los datos son inventados.</p>
+    </footer>
+
+  </div>
+</body>
+</html>

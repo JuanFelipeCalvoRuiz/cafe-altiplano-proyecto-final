@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Carta de Café Altiplano: bebidas calientes y frías, panadería, almuerzos y café en grano.">
+  <title>Carta · Café Altiplano</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/tipografia.css">
+  <link rel="stylesheet" href="css/cajas.css">
+  <link rel="stylesheet" href="css/componentes.css">
+  <link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+  <a class="salto" href="#contenido">Saltar al contenido</a>
+
+  <div class="pagina">
+
+    <!-- ===== CABECERA Y MENÚ ===== -->
+    <header class="cabecera">
+      <a class="marca" href="index.html">
+        <img class="marca__logo" src="imagenes/logo.svg" alt="" width="96" height="96">
+        <span class="marca__nombre">Café Altiplano</span>
+      </a>
+      <nav class="menu" aria-label="Principal">
+        <ul class="menu__lista">
+          <li><a class="menu__enlace" href="index.html">Inicio</a></li>
+          <li><a class="menu__enlace menu__enlace--actual" href="carta.html" aria-current="page">Carta</a></li>
+          <li><a class="menu__enlace" href="sedes.html">Sedes</a></li>
+          <li><a class="menu__enlace" href="reservas.html">Reservas</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ===== PORTADA ===== -->
+    <section class="portada portada--interior">
+      <h1>Carta</h1>
+      <p class="portada__lead">Bebidas, panadería y café en grano. Precios en pesos colombianos, con IVA incluido.</p>
+    </section>
+
+    <!-- ===== CONTENIDO PRINCIPAL ===== -->
+    <main class="contenido" id="contenido">
+      <!-- ===== ÍNDICE DE LA CARTA ===== -->
+      <nav class="tarjeta indice" aria-label="Índice de la carta">
+        <h2>En esta carta</h2>
+        <ul class="indice__lista lista--limpia">
+          <li><a href="#bebidas-calientes">Bebidas calientes</a></li>
+          <li><a href="#bebidas-frias">Bebidas frías</a></li>
+          <li><a href="#panaderia">Panadería y almuerzos</a></li>
+          <li><a href="#granos">Café en grano</a></li>
+        </ul>
+      </nav>
+
+      <!-- ===== BEBIDAS CALIENTES ===== -->
+      <section class="tarjeta tarjeta--ancha" id="bebidas-calientes">
+        <h2>Bebidas calientes</h2>
+        <div class="tabla-contenedor" tabindex="0" role="region" aria-label="Bebidas calientes, tabla con desplazamiento horizontal">
+          <table class="tabla">
+            <caption>Bebidas calientes: descripción, tamaño y precio (COP)</caption>
+            <thead>
+              <tr><th scope="col">Bebida</th><th scope="col">Descripción</th><th scope="col">Tamaño</th><th scope="col" class="tabla__precio">Precio</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Tinto de altura</th>
+                <td>Filtrado de la finca, notas de panela y cacao</td>
+                <td class="tabla__medida">8 oz</td>
+                <td class="tabla__precio">$5.500</td>
+              </tr>
+              <tr>
+                <th scope="row">Espresso doble</th>
+                <td>Dos tiros, cuerpo intenso</td>
+                <td class="tabla__medida">2 oz</td>
+                <td class="tabla__precio">$6.500</td>
+              </tr>
+              <tr>
+                <th scope="row">Capuchino</th>
+                <td>Espresso con leche vaporizada y espuma densa</td>
+                <td class="tabla__medida">12 oz</td>
+                <td class="tabla__precio">$9.800</td>
+              </tr>
+              <tr>
+                <th scope="row">Latte de panela</th>
+                <td>Leche, espresso y panela rallada</td>
+                <td class="tabla__medida">12 oz</td>
+                <td class="tabla__precio">$10.500</td>
+              </tr>
+              <tr>
+                <th scope="row">Chocolate santafereño</th>
+                <td>Chocolate espeso con queso campesino</td>
+                <td class="tabla__medida">12 oz</td>
+                <td class="tabla__precio">$11.500</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ===== BEBIDAS FRÍAS ===== -->
+      <section class="tarjeta tarjeta--ancha" id="bebidas-frias">
+        <h2>Bebidas frías</h2>
+        <div class="tabla-contenedor" tabindex="0" role="region" aria-label="Bebidas frías, tabla con desplazamiento horizontal">
+          <table class="tabla">
+            <caption>Bebidas frías: descripción, tamaño y precio (COP)</caption>
+            <thead>
+              <tr><th scope="col">Bebida</th><th scope="col">Descripción</th><th scope="col">Tamaño</th><th scope="col" class="tabla__precio">Precio</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Cold brew</th>
+                <td>Extraído en frío durante dieciocho horas</td>
+                <td class="tabla__medida">16 oz</td>
+                <td class="tabla__precio">$10.800</td>
+              </tr>
+              <tr>
+                <th scope="row">Tónica de café</th>
+                <td>Espresso sobre tónica y rodaja de naranja</td>
+                <td class="tabla__medida">12 oz</td>
+                <td class="tabla__precio">$12.500</td>
+              </tr>
+              <tr>
+                <th scope="row">Limonada de hierbabuena</th>
+                <td>Limón mandarino, hierbabuena y hielo</td>
+                <td class="tabla__medida">16 oz</td>
+                <td class="tabla__precio">$8.900</td>
+              </tr>
+              <tr>
+                <th scope="row">Frapé de arequipe</th>
+                <td>Café, leche helada y arequipe casero</td>
+                <td class="tabla__medida">16 oz</td>
+                <td class="tabla__precio">$13.500</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ===== NOTAS SOBRE LOS PRECIOS ===== -->
+      <aside class="tarjeta">
+        <h2>Antes de pedir</h2>
+        <ul class="lista">
+          <li>Precios en pesos colombianos (COP), IVA incluido.</li>
+          <li>La leche vegetal no tiene costo adicional.</li>
+          <li>La propina es voluntaria.</li>
+        </ul>
+      </aside>
+
+      <!-- ===== PANADERÍA Y ALMUERZOS ===== -->
+      <section class="tarjeta tarjeta--ancha" id="panaderia">
+        <h2>Panadería y almuerzos</h2>
+        <div class="tabla-contenedor" tabindex="0" role="region" aria-label="Panadería y almuerzos, tabla con desplazamiento horizontal">
+          <table class="tabla">
+            <caption>Panadería y almuerzos: descripción, porción y precio (COP)</caption>
+            <thead>
+              <tr><th scope="col">Producto</th><th scope="col">Descripción</th><th scope="col">Porción</th><th scope="col" class="tabla__precio">Precio</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Almojábana tibia</th>
+                <td>Queso campesino y cuajada, horneada cada mañana</td>
+                <td class="tabla__medida">Unidad</td>
+                <td class="tabla__precio">$4.200</td>
+              </tr>
+              <tr>
+                <th scope="row">Pan de bono</th>
+                <td>Almidón de yuca y queso, recién salido del horno</td>
+                <td class="tabla__medida">Unidad</td>
+                <td class="tabla__precio">$3.800</td>
+              </tr>
+              <tr>
+                <th scope="row">Croissant de bocadillo</th>
+                <td>Hojaldre, bocadillo de guayaba y queso</td>
+                <td class="tabla__medida">Unidad</td>
+                <td class="tabla__precio">$8.500</td>
+              </tr>
+              <tr>
+                <th scope="row">Sándwich de pollo</th>
+                <td>Pollo desmechado, aguacate y pan de masa madre</td>
+                <td class="tabla__medida">Media</td>
+                <td class="tabla__precio">$17.500</td>
+              </tr>
+              <tr>
+                <th scope="row">Tamal del día</th>
+                <td>Pregunta por el relleno en la barra</td>
+                <td class="tabla__medida">Unidad</td>
+                <td class="tabla__precio">$14.000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ===== ALÉRGENOS ===== -->
+      <aside class="tarjeta">
+        <h2>Alérgenos</h2>
+        <dl>
+          <dt>Gluten</dt>
+          <dd>Croissant, sándwich y pan de masa madre.</dd>
+          <dt>Lactosa</dt>
+          <dd>Almojábana, pan de bono, chocolate y bebidas con leche.</dd>
+          <dt>Frutos secos</dt>
+          <dd>Pregunta por los granos con notas de nuez.</dd>
+        </dl>
+      </aside>
+
+      <!-- ===== CAFÉ EN GRANO ===== -->
+      <section class="tarjeta tarjeta--ancha" id="granos">
+        <h2>Café en grano para llevar</h2>
+        <div class="tabla-contenedor" tabindex="0" role="region" aria-label="Café en grano, tabla con desplazamiento horizontal">
+          <table class="tabla">
+            <caption>Café en grano: perfil, presentación y precio (COP)</caption>
+            <thead>
+              <tr><th scope="col">Origen</th><th scope="col">Perfil de taza</th><th scope="col">Bolsa</th><th scope="col" class="tabla__precio">Precio</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Huila, finca La Cumbre</th>
+                <td>Cereza roja, panela, cuerpo medio</td>
+                <td class="tabla__medida">250 g</td>
+                <td class="tabla__precio">$32.000</td>
+              </tr>
+              <tr>
+                <th scope="row">Nariño, altura 2.000 m</th>
+                <td>Cítrico, flores, acidez brillante</td>
+                <td class="tabla__medida">250 g</td>
+                <td class="tabla__precio">$35.000</td>
+              </tr>
+              <tr>
+                <th scope="row">Cundinamarca, familia Rojas</th>
+                <td>Chocolate, nuez, final largo</td>
+                <td class="tabla__medida">250 g</td>
+                <td class="tabla__precio">$30.000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ===== CÓMO PEDIR CAFÉ EN GRANO ===== -->
+      <aside class="tarjeta">
+        <h2>Cómo pedir tu grano</h2>
+        <ol class="lista">
+          <li>Elige el origen que más te guste.</li>
+          <li>Dinos cómo lo preparas: filtro, prensa o espresso.</li>
+          <li>Lo molemos al momento y lo empacamos.</li>
+        </ol>
+      </aside>
+    </main>
+
+    <!-- ===== PIE DE PÁGINA ===== -->
+    <footer class="pie">
+      <address>
+        Escríbenos a <a href="mailto:hola@cafealtiplano.example">hola@cafealtiplano.example</a><br>
+        o llámanos al +57 601 555 0142.
+      </address>
+      <p class="pie__nota">© 2026 Café Altiplano. Sitio de práctica: todos los datos son inventados.</p>
+    </footer>
+
+  </div>
+</body>
+</html>
